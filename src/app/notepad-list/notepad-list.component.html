@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Notepad List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let notepad of notepads | async">
+          <td>{{notepad.name}}</td>
+          <td>{{notepad.description}}</td>
+          <td>{{notepad.date}}</td>
+          <td><button (click)="deleteNotepad(notepad.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateNotepad(notepad.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="notepadDetails(notepad.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

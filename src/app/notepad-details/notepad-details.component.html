@@ -1,0 +1,20 @@
+<h2>Notepad Details</h2> 
+
+<hr/>
+<div *ngIf="notepad">
+  <div>
+    <label><b>Name: </b></label> {{notepad.name}}
+  </div>
+  <div>
+    <label><b>Description: </b></label> {{notepad.description}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{notepad.date}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Notepad List</button><br>
+
+
